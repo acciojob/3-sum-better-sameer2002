@@ -1,4 +1,8 @@
 function threeSum(arr, target) {
+	 arr.sort((a, b) => a - b); // Sort the array in ascending order
+
+  let closestSum = arr[0] + arr[1] + arr[2]; // Initialize closestSum with the sum of the first three numbers
+  let diff = Math.abs(target - closestSum);
  for (let i = 0; i < arr.length - 2; i++) {
     let left = i + 1; // Pointer for the second element
     let right = arr.length - 1; // Pointer for the third element
